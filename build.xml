@@ -1,0 +1,7 @@
+<project name="protractor" default="run" basedir=".">
+<target name="run">
+    <exec executable="C:\Users\Admin\AppData\Roaming\npm\protractor.cmd">
+        <arg line=".\src\main\javascript\conf.js"/>
+    </exec>
+</target>
+</project>
