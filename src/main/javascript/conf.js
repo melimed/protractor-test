@@ -10,7 +10,8 @@
    } 
   } 	  
 };*/
-
+var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
+var JasmineReporter=require('jasmine-reporters');
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
  // specs: ['pt-spec.js'],
@@ -30,6 +31,16 @@ exports.config = {
     onPrepare: function () {
         browser.manage().window().maximize();
         browser.manage().timeouts().implicitlyWait(5000);
+        
+        jasmine.getEnv().addReporter(
+                new Jasmine2HtmlReporter({
+                 savePath: './reports/'
+                }));
+        
+        
+        jasmine.getEnv().addReporter( new JasmineReporter.JUnitXmlReporter({
+        	consolidateAll: true,
+        	savePath: './reports/'        
+        	}));
     }
 };
-

@@ -22,7 +22,7 @@
 });*/
 
 
-var homePage=require ('./../pageObjects/angularHomePage.js')
+var homePage=require ('../../main/pageObjects/angularHomePage.js')
 
 describe('Protractor Test', function() {
   it('should add a new item', function() {    
@@ -41,7 +41,7 @@ describe('Protractor Test', function() {
 	 var angularHome= new homePage(); 
        angularHome.selectFirstMenuItem();
        angularHome.selectTutorial();
-       expect(browser.getTitle()).toEqual('AngularJS: Tutorial: Tutorial');
+       expect(browser.getTitle()).toEqual('AngularJS: Tutorial: Tutorial2');
    })
 });
 
