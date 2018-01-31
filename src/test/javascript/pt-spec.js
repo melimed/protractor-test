@@ -33,7 +33,7 @@ describe('Protractor Test', function() {
     expect(angularHome.countTodoListItems()).toEqual(3);
     expect(angularHome.getItemText(2)).toEqual('write first protractor test');
     angularHome.checkItem(2)
-    expect(angularHome.countSelectedItems()).toEqual(2);
+    expect(angularHome.countSelectedItems()).toEqual(2)
 	});
  
  //second test
