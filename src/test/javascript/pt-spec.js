@@ -30,7 +30,7 @@ describe('Protractor Test', function() {
 	angularHome.getB();
 	angularHome.addNewTask('write first protractor test');
 	angularHome.clickAdd();
-    expect(angularHome.countTodoListItems()).toEqual(3);
+    expect(angularHome.countTodoListItems()).toEqual(8);
     expect(angularHome.getItemText(2)).toEqual('write first protractor test');
     angularHome.checkItem(2)
     expect(angularHome.countSelectedItems()).toEqual(2)
